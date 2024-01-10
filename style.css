@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+:root {
+  --color: rgb(39, 39, 39);
+  --secondary-color: #7236ff;
+  --primary-bg: #ffffff;
+  --secondary-bg: #f0f0f0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--secondary-bg);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 5%;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  box-shadow: 1px 4px 10px rgba(211, 211, 211, 0.514);
+  background-color: var(--primary-bg);
+}
+.navbar a,
+.mobile-navbar a {
+  color: var(--color);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.label {
+  font-size: 1.8rem;
+  color: var(--color);
+}
+.navbar a:hover {
+  color: var(--secondary-color);
+  transition: all ease-in-out 0.2s;
+}
+/* Mobile navbar */
+
+.mobile-navbar {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-bg);
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mobile-navbar a:hover {
+  color: var(--secondary-color);
+  transition: all ease-in-out 0.2s;
+}
+.menu-close-btn {
+  cursor: pointer;
+}
+.menu-open-btn {
+  width: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+/* Section Home */
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12% 5%;
+  gap: 3rem;
+}
+
+.home-text h1 {
+  font-size: 4rem;
+  color: var(--color);
+  letter-spacing: 2px;
+}
+.home-text p {
+  font-size: 1.4rem;
+}
+.home-img {
+  width: 400px;
+  height: 400px;
+  background: url(img/selfie.jpeg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+.social-link {
+  width: 40px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.social-link:hover {
+  filter: invert(21%) sepia(81%) saturate(4598%) hue-rotate(253deg)
+    brightness(104%) contrast(101%);
+}
+/* Section Tech Stack */
+.tech-stack {
+  padding: 5% 0;
+  background-color: var(--primary-bg);
+}
+.tech-stack h2 {
+  margin-right: 4rem;
+}
+.tech {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.tech img {
+  width: 60px;
+  transition: all ease-in-out 0.2s;
+}
+.tech img:hover {
+  transform: translateY(-15%);
+}
+/* About Me */
+.about-me {
+  text-align: center;
+  padding: 5% 0;
+}
+.about-me h2 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  font-weight: 800;
+}
+.about-me h3 {
+  color: var(--color);
+  font-size: 1.8rem;
+}
+.about-me p {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+/* Portfolio */
+.portfolio {
+  background-color: var(--primary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 5% 0;
+}
+.portfolio h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+.card {
+  background-color: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 1000px;
+  max-width: 1100px;
+  padding: 2rem 2rem;
+  gap: 15px;
+  border-radius: 30px;
+}
+.project-links {
+  display: flex;
+  gap: 10px;
+}
+.project-links a {
+  text-decoration: none;
+  color: var(--color);
+  font-size: 2rem;
+}
+.project-links a:hover {
+  color: var(--secondary-color);
+}
+
+.card-image {
+  width: 500px;
+}
+.card-image img {
+  width: 400px;
+}
+/* Contact */
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 3% 0;
+}
+.contacts {
+  display: flex;
+  gap: 15px;
+}
+.contacts img {
+  margin-top: -15px;
+}
+h2 {
+  margin-top: 0;
+}
+/* Media Queries */
+
+/* XL Screen */
+@media (min-width: 2550px) {
+  .navbar a {
+    font-size: 1.6rem;
+    margin: 1rem 1.5rem;
+  }
+}
+/* Phone */
+@media (max-width: 1500px) {
+  .menu-open-btn {
+    display: flex;
+  }
+  .navbar {
+    display: none;
+  }
+  .section {
+    flex-direction: column;
+  }
+  .home-content {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .tech-stack h2 {
+    margin-right: 0;
+  }
+  .card {
+    flex-direction: column;
+    min-width: 90vw;
+  }
+  .card-image {
+    width: auto;
+  }
+}
