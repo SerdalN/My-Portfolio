@@ -23,7 +23,6 @@ section {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 5%;
 }
 
 /* Navbar */
@@ -117,6 +116,9 @@ header {
 .tech-stack {
   padding: 5% 0;
   background-color: var(--primary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .tech-stack h2 {
   margin-right: 4rem;
@@ -126,6 +128,8 @@ header {
   align-items: center;
   justify-content: space-evenly;
   gap: 20px;
+  width: 30%;
+  flex-wrap: wrap;
 }
 .tech img {
   width: 60px;
@@ -159,8 +163,8 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 5rem;
-  padding: 5% 0;
+  padding: 5% 5%;
+  gap: 50px;
 }
 .portfolio h2 {
   font-size: 2.5rem;
@@ -171,11 +175,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  min-width: 1000px;
-  max-width: 1100px;
+  width: 80vw;
   padding: 2rem 2rem;
   gap: 15px;
   border-radius: 30px;
+  word-wrap: break-word;
 }
 .project-links {
   display: flex;
@@ -233,20 +237,47 @@ h2 {
   }
   .section {
     flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .home-content {
     flex-direction: column-reverse;
     flex-wrap: wrap;
     text-align: center;
   }
+  .tech {
+    width: 100%;
+  }
   .tech-stack h2 {
-    margin-right: 0;
+    margin-right: 1rem;
+  }
+  .portfolio {
+    gap: 50px;
+    padding: 5% 0;
   }
   .card {
     flex-direction: column;
-    min-width: 90vw;
+    width: 80vw;
+    flex-wrap: wrap;
   }
   .card-image {
-    width: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-image img {
+    width: 300px;
+    height: auto;
+  }
+  .home-img {
+    width: 300px;
+    height: 300px;
+  }
+  .home-text h1 {
+    letter-spacing: 0;
+    font-size: 2.2rem;
   }
 }
