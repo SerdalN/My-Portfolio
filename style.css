@@ -126,8 +126,8 @@ header {
 .tech {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 20px;
+  justify-content: center;
+  gap: 15px;
   width: 30%;
   flex-wrap: wrap;
 }
@@ -252,6 +252,9 @@ h2 {
   }
   .tech-stack h2 {
     margin-right: 1rem;
+  }
+  .tech img {
+    width: 45px;
   }
   .portfolio {
     gap: 40px;
